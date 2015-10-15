@@ -1,0 +1,6 @@
+app_name: lwd 
+deploy_user: deployer
+deploy_group: deployers
+## this is the local directory with the SSH keys and known_hosts 
+## file. do not include a trailing slash
+ssh_dir: ~/projects/lwd/ssh_keys

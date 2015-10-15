@@ -9,3 +9,5 @@
     a. pip install fabric==1.10.2
 5. Run fabric code
     a. fab bootstrap
+6. pip install ansible
+7. Run deploy_prod.sh
