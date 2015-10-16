@@ -21,3 +21,6 @@ code_repository: git@github.com:tfolkman/lwd_site.git
 
 venv_dir: "/home/{{ deploy_user }}/venvs/{{ app_name }}"
 venv_python: "{{venv_dir}}/bin/python"
+wsgi_env_vars: {
+  DEBUG: True
+}
