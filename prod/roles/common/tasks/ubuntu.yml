@@ -12,6 +12,7 @@
     - fail2ban
     - python-virtualenv
     - python-dev
+    - libpq-dev
 
 - name: enable SSH in firewall
   ufw: rule=allow port=22

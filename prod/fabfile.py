@@ -66,6 +66,7 @@ def _create_privileged_user():
     run('/usr/bin/passwd %s' % env.new_user)
     run('/usr/sbin/usermod -a -G ' + env.new_user_grp + ' ' + \
         env.new_user)
+    run('/usr/sbin/usermod -s /bin/bash {0}'.format(env.new_user))
     run('mkdir /home/%s/.ssh' % env.new_user)
     run('chown -R %s /home/%s/.ssh' % (env.new_user,
         env.new_user))

@@ -1,0 +1,10 @@
+###
+# Handles application dependencies and environment variables
+# Also syncs the application with the database schema
+##
+- name: create virtualenv directory if it does not already exist
+  file: path={{ venv_dir }} state=directory
+
+- name: install dependencies into a new virtualenv
+  pip: requirements={{ app_dir }}/requirements.txt
+       virtualenv={{ venv_dir }}

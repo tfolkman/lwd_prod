@@ -4,3 +4,20 @@ deploy_group: deployers
 ## this is the local directory with the SSH keys and known_hosts 
 ## file. do not include a trailing slash
 ssh_dir: ~/projects/lwd/ssh_keys
+
+## deploy_ssl true for HTTPS, false for only HTTP
+deploy_ssl: false
+wsgi_server_port: 8000
+fqdn: www.learningwithdata.com
+app_dir: /home/{{deploy_user}}/{{app_name}}
+## local directory SSL certificates should be located here
+## do not include a trailing slash
+#ssl_certs_dir: ~/fsp-deployment-guide/ssl_cert
+
+## this is the local directory with the deploy_key and deploy_key.pub
+## files. do not include a trailing slash
+local_deploy_key_dir: ~/projects/lwd/deploy_keys
+code_repository: git@github.com:tfolkman/lwd_site.git
+
+venv_dir: "/home/{{ deploy_user }}/venvs/{{ app_name }}"
+venv_python: "{{venv_dir}}/bin/python"
