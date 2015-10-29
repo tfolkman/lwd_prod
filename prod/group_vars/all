@@ -23,6 +23,10 @@ venv_dir: "/home/{{ deploy_user }}/venvs/{{ app_name }}"
 venv_python: "{{venv_dir}}/bin/python"
 wsgi_env_vars: {
   DEBUG: True
+  DATABASE_URL: '{{ db_url }}',
+  REDIS_SERVER: 'localhost',
+  REDIS_PORT: 6379,
+  REDIS_DB: 1
 }
 
 db_url: postgresql://{{deploy_user}}@localhost/{{app_name}}

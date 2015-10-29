@@ -12,3 +12,6 @@
 - name: create .env file in base directory of the app from template
   template: src=env.j2
             dest={{ app_dir }}/.env
+
+- name: sync the database tables between Flask and PostgreSQL
+  shell: ". {{ app_dir }}/.env; {{ venv_python }} {{ app_dir }}/manage.py syncdb"
