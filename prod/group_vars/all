@@ -24,3 +24,7 @@ venv_python: "{{venv_dir}}/bin/python"
 wsgi_env_vars: {
   DEBUG: True
 }
+
+db_url: postgresql://{{deploy_user}}@localhost/{{app_name}}
+db_name: "{{ app_name }}"
+db_user: "{{ deploy_user }}"
