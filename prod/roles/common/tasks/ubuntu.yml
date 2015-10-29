@@ -2,6 +2,11 @@
 # updates the APT package cache and install packages
 # servers necessary for web. also enables firewall
 ##
+
+- name: add redis repo
+  apt_repository: repo='ppa:chris-lea/redis-server'
+  sudo: yes
+
 - apt: update_cache=yes
   sudo: yes
 
@@ -16,6 +21,7 @@
     - nodejs
     - nodejs-dev
     - npm
+    - redis-server
 
 - name: enable SSH in firewall
   ufw: rule=allow port=22
