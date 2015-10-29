@@ -18,7 +18,7 @@
 
 - name: configure separate PostgreSQL user
   postgresql_user: db={{ app_name }} name={{ db_user }}
-                   priv=ALL
+                   password={{ db_password }} priv=ALL
                    role_attr_flags=NOSUPERUSER
   sudo: yes
   sudo_user: postgres

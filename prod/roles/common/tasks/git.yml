@@ -16,4 +16,4 @@
 - name: clone or pull latest web app code
   git: repo={{ code_repository }} dest={{ app_dir }}
        key_file=/home/{{ deploy_user }}/deploy_keys/deploy_keys
-       accept_hostkey=yes
+       accept_hostkey=yes force=yes

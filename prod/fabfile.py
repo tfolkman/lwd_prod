@@ -19,7 +19,7 @@ env.password = prompt("What is your password?")
 
 # all IP address or hostnames of the servers you want to put
 # your SSH keys and authorized_host files on, ex: 192.168.1.1
-env.hosts = ['159.203.243.66']
+env.hosts = ['159.203.243.23']
 
 # your full name for the new non-root user
 env.new_user_full_name = 'Tyler Folkman' # ex: Matt Makai

@@ -8,10 +8,10 @@
 
 - include: git.yml
 
-- include: dependencies.yml
-
-- include: wsgi.yml
-
 - include: postgresql.yml
 
 - include: redis.yml
+
+- include: dependencies.yml
+
+- include: wsgi.yml
