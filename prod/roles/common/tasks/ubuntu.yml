@@ -13,6 +13,9 @@
     - python-virtualenv
     - python-dev
     - libpq-dev
+    - nodejs
+    - nodejs-dev
+    - npm
 
 - name: enable SSH in firewall
   ufw: rule=allow port=22

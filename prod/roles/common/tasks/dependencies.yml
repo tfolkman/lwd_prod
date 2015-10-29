@@ -15,3 +15,6 @@
 
 - name: sync the database tables between Flask and PostgreSQL
   shell: ". {{ app_dir }}/.env; {{ venv_python }} {{ app_dir }}/manage.py syncdb"
+
+- name: install npm dependencies
+  shell: "cd /home/deployer/lwd/lwd/static/js; npm install"
