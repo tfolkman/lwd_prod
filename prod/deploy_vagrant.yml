@@ -1,0 +1,5 @@
+- name: apply common configuration to server
+  sudo: true
+  hosts: all
+  roles:
+    - common
